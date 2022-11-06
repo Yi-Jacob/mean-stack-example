@@ -31,6 +31,9 @@
         },
         "@schematics/angular:service": {
           "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -104,11 +107,21 @@
           "options": {
             "browserTarget": "client:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
+  "defaultProject": "client",
   "cli": {
-    "analytics": false
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
