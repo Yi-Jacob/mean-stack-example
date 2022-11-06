@@ -49,7 +49,7 @@ async function applySchemaValidation(db: mongodb.Db) {
     collMod: "employees",
     validator: jsonSchema
   }).catch(async (error: mongodb.MongoServerError) => {
-    if (error.codeName === 'NamespaceNotFound') {
+    if (error.codeName === "NamespaceNotFound") {
       await db.createCollection("employees", { validator: jsonSchema });
     }
   });
