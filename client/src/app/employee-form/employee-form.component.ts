@@ -52,7 +52,7 @@ import { Employee } from '../employee';
         </div>
       </div>
 
-      <button class="btn btn-primary" type="submit" [disabled]="employeeForm.invalid">Add</button>
+      <button class="btn btn-primary" type="submit" [disabled]="employeeForm.invalid">Add Employee</button>
     </form>
   `,
   styles: [
